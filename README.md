@@ -3,6 +3,7 @@ Servicio REST para manejo de usuarios y productos, con frontend básico para su 
 
 
 #Imagenes
+
 Panel admin:
 <img width="1909" height="969" alt="image" src="https://github.com/user-attachments/assets/2122585a-f898-4eef-9ac6-0567728a5156" />
 <img width="1913" height="968" alt="image" src="https://github.com/user-attachments/assets/b13564bc-4edc-4251-88e9-70a1dcc0445d" />
