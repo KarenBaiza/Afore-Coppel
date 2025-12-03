@@ -1,5 +1,5 @@
 # Afore-Coppel
-Servicio REST para manejo de usuarios y productos, con frontend básico para su consumo. Incluye CRUD, autenticación.
+Servicio REST que permite gestionar usuarios y productos, acompañado de un frontend básico para interactuar con él. Incluye operaciones CRUD completas y autenticación de usuarios. Ideal para demostrar funcionalidades esenciales de un sistema de gestión.
 
 
 **Imagenes**
