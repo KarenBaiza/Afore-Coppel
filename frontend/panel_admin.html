@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin</title>
+
+<!-- ------------------------------- ESTILO CSS------------------------------------------- -->
+    <style>
+        /* estilos generales */
+        body 
+        {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFF8DC;
+        }
+
+        /* Contenedor principal: sidebar + contenido */
+        .container 
+        {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar 
+        {
+            width: 220px;
+            background-color: #FFD700;
+            padding: 20px;
+        }
+
+        .sidebar h2 
+        {
+            color: #000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul 
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li 
+        {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a 
+        {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover 
+        {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .main-content 
+        {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 
+        {
+            color: #333;
+        }
+
+        button 
+        {
+            background-color: #FFD700;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button:hover 
+        {
+            background-color: #FFC300;
+        }
+
+        /* Grid de productos o info */
+        .grid 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .producto 
+        {
+            background-color: #FFFACD;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #ccc;
+            width: 220px;
+            text-align: center;
+        }
+
+        .producto img 
+        {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .producto p 
+        {
+            margin: 8px 0;
+        }
+
+        .producto-botones a 
+        {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-editar 
+        {
+            background-color: #28a745;
+            color: white;
+            border: 1px solid #28a745;
+        }
+
+        .btn-editar:hover 
+        {
+            background-color: #218838;
+        }
+
+        .btn-borrar 
+        {
+            background-color: #dc3545;
+            color: white;
+            border: 1px solid #dc3545;
+        }
+
+        .btn-borrar:hover 
+        {
+            background-color: #c82333;
+        }
+
+        /* Secciones ocultas */
+        .section 
+        {
+            display: none;
+        }
+
+        /* Tablas */
+        table 
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td 
+        {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th 
+        {
+            background: #FFD700;
+        }
+    </style>
+</head>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="#" id="dashboard-link">Dashboard</a></li>
+        <li><a href="#" id="productos-link">Productos</a></li>
+        <li><a href="#" id="usuarios-link">Usuarios</a></li>
+        <li><a href="../backend/logout.php">Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <!-- Dashboard -->
+      <div id="dashboard" class="section" style="display:block;">
+        <h1>Bienvenido, Admin</h1>
+        <div class="grid">
+          <div class="producto">Productos: <span id="total-productos">0</span></div>
+          <div class="producto">Usuarios: <span id="total-usuarios">0</span></div>
+          <div class="producto">Cambios recientes</div>
+        </div>
+      </div>
+
+      <!-- Productos -->
+      <div id="productos" class="section">
+        <h1>Gestión de Productos</h1>
+        <div class="grid" id="contenedor-productos"></div>
+      </div>
+
+      <!-- Usuarios -->
+      <div id="usuarios" class="section">
+        <h1>Gestión de Usuarios</h1>
+        <table id="tabla-usuarios">
+          <thead>
+            <tr><th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Acciones</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="panel_admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Usuario - Productos</title>
+
+<!-- ------------------------------- ESTILO CSS------------------------------------------- -->
+    <style>
+        /* ===== General ===== */
+        body 
+        {
+            margin:0; 
+            font-family: Arial, sans-serif; 
+            display:flex; 
+            background-color:#FFF8DC;
+        }
+        
+        .sidebar 
+        {
+            width:220px; 
+            background-color:#FFD700; 
+            padding:20px; 
+            height:100vh;
+        }
+        
+        .sidebar h2 
+        {
+            color:#000; 
+            text-align:center; 
+            margin-bottom:20px;
+        }
+        
+        .sidebar ul 
+        {
+            list-style:none; 
+            padding:0;
+        }
+        
+        .sidebar ul li 
+        {
+            margin:15px 0;
+        }
+        
+        .sidebar ul li a 
+        {
+            color:#000; 
+            text-decoration:none; 
+            font-weight:bold;
+        }
+        
+        .sidebar ul li a:hover 
+        {
+            text-decoration:underline;
+        }
+
+        .main-content 
+        {
+            flex:1; 
+            padding:20px;
+        }
+        
+        h1 
+        {
+            color:#333;
+        }
+        
+        .grid 
+        {
+            display:flex; 
+            flex-wrap:wrap; 
+            gap:15px;
+        }
+        
+        .producto 
+        {
+            background-color:#FFFACD; 
+            padding:15px; 
+            border-radius:10px; 
+            box-shadow:2px 2px 5px #ccc; 
+            width:220px; 
+            text-align:center;
+        }
+        
+        .producto img 
+        {
+            width:100%; 
+            border-radius:10px;
+        }
+        
+        .producto p 
+        {
+            margin:8px 0; 
+            font-weight:bold;
+        }
+        
+        .boton-contacto 
+        {
+            display:inline-block; 
+            padding:8px 12px; 
+            background-color:#28a745; 
+            color:white; 
+            border-radius:5px; 
+            text-decoration:none; 
+            margin-top:10px;
+        }
+        
+        .boton-contacto:hover 
+        {
+            background-color:#218838;
+        }
+        
+        .section 
+        {
+            display:block;
+        }
+    </style>
+</head>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<body>
+
+<div class="sidebar">
+    <h2>Usuario</h2>
+    <ul>
+        <li><a href="#" id="productos-link">Productos</a></li>
+        <li><a href="../backend/logout.php">Cerrar sesión</a></li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <!-- Productos -->
+    <div id="productos" class="section" style="display:block;">
+        <h1>Productos Disponibles</h1>
+        <div class="grid" id="contenedor-productos">
+            <!-- Productos se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+</div>
+
+<script src="panel_usuario.js"></script>
+</body>
+</html>

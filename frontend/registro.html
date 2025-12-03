@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+<!-– ------------------------------- ESTILO CSS------------------------------------------- –->
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+            background-color: #fffbe6; /* fondo suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container 
+        {
+            background-color: white; /* contenedor blanco */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .form-container h2 
+        {
+            color: #f0b90b; /* amarillo intenso */
+            margin-bottom: 20px;
+        }
+
+        .form-container input, .form-container select 
+        {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-container button 
+        {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #f0b90b; /* amarillo intenso */
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover 
+        {
+            background-color: #ffd600; /* más brillante al pasar el mouse */
+        }
+
+        .form-container p 
+        {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-container a 
+        {
+            color: #f0b90b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-container a:hover 
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<body>
+    <div class="form-container">
+        <h2>Registro</h2>
+        <form id="registroForm" action="" method="post">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            <input type="email" name="correo" id="correo" placeholder="Correo" required>
+            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+            <select name="rol" id="rol">
+                <option value="usuario" selected>Usuario</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>
